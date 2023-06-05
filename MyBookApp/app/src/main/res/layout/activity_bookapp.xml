@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01"
+    tools:context=".bookapp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="@color/purple_500"
+        android:elevation="0dp"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idRLSearchBar"
+        android:layout_below="@id/toolbar"
+        android:background="@color/purple_500" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/search_back"
+        android:orientation="horizontal"
+
+        android:weightSum="6">
+
+
+        <EditText
+            android:id="@+id/idEdtSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="5.1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:hint="Search Books"
+            android:textAlignment="textStart"
+            android:textColorHint="#757575"
+            android:textSize="13dp"
+            tools:ignore="RtlCompat,TouchTargetSizeCheck,TextSizeCheck" />
+
+
+        <View
+
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:background="@android:color/darker_gray" />
+
+        <ImageView
+            android:id="@+id/idIVSearch"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="0.8"
+            android:src="@drawable/ic_search"
+            android:layout_gravity="center"
+            app:tint="@color/black"
+            />
+    </LinearLayout>
+</RelativeLayout>
+
